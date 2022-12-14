@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tm.TaskElement">
+   <children>
+      <ScrollPane layoutX="6.0" layoutY="2.0" prefHeight="397.0" prefWidth="221.0">
+         <content>
+            <VBox fx:id="vBox" prefHeight="424.0" prefWidth="206.0" />
+         </content>
+      </ScrollPane>
+      <ComboBox fx:id="comboUsers" layoutX="260.0" layoutY="10.0" prefHeight="6.0" prefWidth="173.0" />
+      <ComboBox fx:id="comboEpic" layoutX="260.0" layoutY="42.0" prefHeight="6.0" prefWidth="173.0" />
+      <Button fx:id="buttonAddTask" layoutX="260.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonAddTaskClick" prefHeight="25.0" prefWidth="173.0" text="Создать задачу" />
+      <Button fx:id="buttonExit" layoutX="260.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Выйти" />
+      <Button fx:id="buttonAddEpic" layoutX="349.0" layoutY="355.0" mnemonicParsing="false" onAction="#buttonAddEpicClick" prefHeight="25.0" prefWidth="83.0" text="Новый эпик" />
+      <Label fx:id="labelLind" layoutX="260.0" layoutY="100.0" text="Добавить задачу" />
+      <TextField fx:id="fieldTitle" layoutX="260.0" layoutY="117.0" prefHeight="25.0" prefWidth="173.0" promptText="Заголовок" />
+      <TextField fx:id="fieldPriority" layoutX="260.0" layoutY="153.0" prefHeight="25.0" prefWidth="173.0" promptText="Приоритет" />
+      <TextField fx:id="fieldComplexity" layoutX="260.0" layoutY="188.0" prefHeight="25.0" prefWidth="173.0" promptText="Сложность" />
+      <ComboBox fx:id="comboEpicChoose" layoutX="260.0" layoutY="251.0" prefHeight="25.0" prefWidth="173.0" promptText="Эпик" />
+      <Button fx:id="buttonApprove" layoutX="260.0" layoutY="288.0" mnemonicParsing="false" onAction="#approveButtonClick" prefHeight="25.0" prefWidth="173.0" text="Подтвердить" />
+      <Button fx:id="buttonApproveCombo" layoutX="260.0" layoutY="75.0" mnemonicParsing="false" onAction="#approveButtonComboClick" prefHeight="25.0" prefWidth="173.0" text="Подтвердить" />
+      <TextField fx:id="fieldNameEpic" layoutX="260.0" layoutY="164.0" prefHeight="25.0" prefWidth="173.0" promptText="Название" />
+      <TextField fx:id="fieldColorEpic" layoutX="260.0" layoutY="213.0" prefHeight="25.0" prefWidth="173.0" promptText="Цвет" />
+      <Label fx:id="labelEpicText" layoutX="261.0" layoutY="143.0" text="Добавить эпик" />
+      <Button fx:id="buttonApproveEpic" layoutX="260.0" layoutY="258.0" mnemonicParsing="false" onAction="#buttonApproveEpicClick" prefHeight="25.0" prefWidth="173.0" text="Подтвердить" />
+      <TextField fx:id="fieldDeadline" layoutX="260.0" layoutY="218.0" prefHeight="25.0" prefWidth="173.0" promptText="Дедлайн (HH:MM:SS)" />
+   </children>
+</AnchorPane>
