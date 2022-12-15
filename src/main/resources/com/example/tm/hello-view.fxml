@@ -18,7 +18,7 @@
       <ComboBox fx:id="comboUsers" layoutX="260.0" layoutY="10.0" prefHeight="6.0" prefWidth="173.0" />
       <ComboBox fx:id="comboEpic" layoutX="260.0" layoutY="42.0" prefHeight="6.0" prefWidth="173.0" />
       <Button fx:id="buttonAddTask" layoutX="260.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonAddTaskClick" prefHeight="25.0" prefWidth="173.0" text="Создать задачу" />
-      <Button fx:id="buttonExit" layoutX="260.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Выйти" />
+      <Button fx:id="buttonExit" onAction="#buttonExitClick" layoutX="260.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Выйти" />
       <Button fx:id="buttonAddEpic" layoutX="349.0" layoutY="355.0" mnemonicParsing="false" onAction="#buttonAddEpicClick" prefHeight="25.0" prefWidth="83.0" text="Новый эпик" />
       <Label fx:id="labelLind" layoutX="260.0" layoutY="100.0" text="Добавить задачу" />
       <TextField fx:id="fieldTitle" layoutX="260.0" layoutY="117.0" prefHeight="25.0" prefWidth="173.0" promptText="Заголовок" />

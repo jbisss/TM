@@ -39,9 +39,6 @@ public class Task {
         return this.date.compareTo(this.deadLine) > 0;
     }
 
-    public int getTimeRes() {
-        return timeRes;
-    }
 
     public int getId() {
         return id;
@@ -55,9 +52,6 @@ public class Task {
         return epic.getName();
     }
 
-    public static int getCount() {
-        return count;
-    }
 
     public int getStoryPoints() {
         return storyPoints;
@@ -72,13 +66,5 @@ public class Task {
     }
     public Color getColor(){
         return this.epic.getColor();
-    }
-
-    public boolean isOpen() {
-        return isOpen;
-    }
-
-    public void setIsOpen(boolean isOpen) {
-        isOpen = isOpen;
     }
 }

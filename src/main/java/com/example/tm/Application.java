@@ -43,28 +43,6 @@ public class Application extends javafx.application.Application {
         launch();
     }
 
-    public static Scene BoardScene() {
-        board.addUser(Application.username);
-        board.addTask("test", 2,"major", Application.username, "testEpic");
-        board.addTask("aaaaaa", 2,"major", Application.username, "testEpic");
-        board.addTask("aaaaaa", 2,"major", Application.username, "testEpic");
-        board.addTask("aaaaaa", 2,"major", Application.username, "testEpic");
-        board.addTask("aaaaaa", 2,"major", Application.username, "testEpic");
-        board.addTask("aaaaaa", 2,"major", Application.username, "testEpic");
-        ArrayList<GridPane> ta = new ArrayList<GridPane>();
-
-
-        ObservableList<GridPane> langs = FXCollections.observableArrayList(ta);
-        ListView<GridPane> langsListView = new ListView<GridPane>(langs);
-        langsListView.minHeight(600);
-        langsListView.minWidth(800);
-
-        FlowPane root = new FlowPane(langsListView);
-
-
-        return new Scene(root, 600,800);
-    }
-
     public static void changeScene(Scene scene, ActionEvent event) {
         Stage stageTheEventSourceNodeBelongs = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stageTheEventSourceNodeBelongs.setScene(scene);

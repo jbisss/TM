@@ -10,6 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -36,6 +37,10 @@ public class TaskElement {
     public Label labelEpicText;
     public Button buttonApproveEpic;
     public TextField fieldDeadline;
+    public void buttonExitClick(){
+        Stage stagePrev = (Stage) buttonExit.getScene().getWindow();
+        stagePrev.hide();
+    }
 
     private int countCurrentTime(){
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
