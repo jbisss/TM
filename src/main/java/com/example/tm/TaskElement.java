@@ -86,6 +86,7 @@ public class TaskElement {
         labelEpic.setTextFill(task.getColor());
         Label labelSp = new Label("SP: " + task.getStoryPoints());
         Label labelName = new Label("Username: " + task.getUserName());
+        Label labelComplexity = new Label("Complexity: " + task.getComplexity());
         Label labelPriority = new Label("Priority: " + task.getPriority());
         System.out.println(task.isSpoiled());
         String statusSet = task.isSpoiled() ? "Просрочено" : "Не просрочено";
@@ -108,6 +109,7 @@ public class TaskElement {
         vBoxNew.getChildren().add(labelEpic);
         vBoxNew.getChildren().add(labelSp);
         vBoxNew.getChildren().add(labelName);
+        vBoxNew.getChildren().add(labelComplexity);
         vBoxNew.getChildren().add(labelPriority);
         vBoxNew.getChildren().add(labelStatus);
         vBoxNew.getChildren().add(button);
@@ -175,7 +177,8 @@ public class TaskElement {
             if (Board.getEpicByName(comboEpicChoose.getValue()) != null){
                 Epic epicToAdd = Board.getEpicByName(comboEpicChoose.getValue());
                 Board.tasks.add(new Task(fieldTitle.getText(), 5, fieldPriority.getText(),
-                        epicToAdd, User.currentUser, countCurrentTime(), fieldDeadline.getText(), Integer.parseInt(fieldMark.getText())));
+                        epicToAdd, fieldComplexity.getText(),User.currentUser, countCurrentTime(),
+                        fieldDeadline.getText(), Integer.parseInt(fieldMark.getText())));
                 System.out.println(Board.tasks.get(0).getUserName());
             }
             fieldMark.setText("");

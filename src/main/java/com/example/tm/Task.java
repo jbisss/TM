@@ -11,6 +11,7 @@ public class Task {
     private int storyPoints;
     private String priority;
     private String title;
+    private String complexity;
     private User user;
     private Epic epic;
     private int timeRes;
@@ -19,7 +20,9 @@ public class Task {
     private String deadLine;
     private static int count = 0;
 
-    public Task(String title, int storyPoints, String priority, Epic epic, User user, int time, String deadLine, int sp) {
+    public Task(String title, int storyPoints, String priority, Epic epic, String complexity,
+                User user, int time, String deadLine, int sp) {
+        this.complexity = complexity;
         this.epic = epic;
         this.priority = priority;
         this.user = user;
@@ -39,8 +42,9 @@ public class Task {
         System.out.println(this.date);
         return this.date.compareTo(this.deadLine) > 0;
     }
-
-
+    public String getComplexity(){
+        return this.complexity;
+    }
     public int getId() {
         return id;
     }
