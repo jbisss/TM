@@ -19,13 +19,14 @@ public class Task {
     private String deadLine;
     private static int count = 0;
 
-    public Task(String title, int storyPoints, String priority, Epic epic, User user, int time, String deadLine) {
+    public Task(String title, int storyPoints, String priority, Epic epic, User user, int time, String deadLine, int sp) {
         this.epic = epic;
         this.priority = priority;
         this.user = user;
         this.storyPoints = storyPoints;
         this.title = title;
         this.timeRes = time;
+        this.storyPoints = sp;
         DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
         this.date = dateFormat.format(Calendar.getInstance().getTime());
         this.deadLine = deadLine;

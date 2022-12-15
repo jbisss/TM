@@ -37,6 +37,8 @@ public class TaskElement {
     public Label labelEpicText;
     public Button buttonApproveEpic;
     public TextField fieldDeadline;
+    public TextField fieldMark;
+
     public void buttonExitClick(){
         Stage stagePrev = (Stage) buttonExit.getScene().getWindow();
         stagePrev.hide();
@@ -142,6 +144,7 @@ public class TaskElement {
         labelLind.setVisible(true);
         fieldComplexity.setVisible(true);
         fieldPriority.setVisible(true);
+        fieldMark.setVisible(true);
         fieldTitle.setVisible(true);
         fieldDeadline.setVisible(true);
         comboEpicChoose.setVisible(true);
@@ -168,12 +171,14 @@ public class TaskElement {
             fieldDeadline.setVisible(false);
             comboEpicChoose.setVisible(false);
             buttonApprove.setVisible(false);
+            fieldMark.setVisible(false);
             if (Board.getEpicByName(comboEpicChoose.getValue()) != null){
                 Epic epicToAdd = Board.getEpicByName(comboEpicChoose.getValue());
                 Board.tasks.add(new Task(fieldTitle.getText(), 5, fieldPriority.getText(),
-                        epicToAdd, User.currentUser, countCurrentTime(), fieldDeadline.getText()));
+                        epicToAdd, User.currentUser, countCurrentTime(), fieldDeadline.getText(), Integer.parseInt(fieldMark.getText())));
                 System.out.println(Board.tasks.get(0).getUserName());
             }
+            fieldMark.setText("");
             fieldComplexity.setText("");
             fieldPriority.setText("");
             fieldTitle.setText("");
@@ -190,6 +195,7 @@ public class TaskElement {
         labelLind.setVisible(false);
         fieldComplexity.setVisible(false);
         fieldPriority.setVisible(false);
+        fieldMark.setVisible(false);
         fieldTitle.setVisible(false);
         fieldDeadline.setVisible(false);
         comboEpicChoose.setVisible(false);
